@@ -3,12 +3,14 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>FlowTight — Record. Rap. Release.</title>
-  <meta name="description" content="FlowTight is the rap creation studio in your pocket. Beat maker, AI flow generator, vocal effects, and commercial licensing — all free to start." />
-  <meta property="og:title" content="FlowTight — Record. Rap. Release." />
-  <meta property="og:description" content="The rap creation studio in your pocket. Available on iOS." />
-  <meta property="og:image" content="og-image.png" />
+  <title>FlowTight — Record. Create. Release.</title>
+  <meta name="description" content="FlowTight is the music creation studio in your pocket. Beat maker, AI lyric generator, vocal effects, and commercial licensing — built for every recording artist." />
+  <meta property="og:title" content="FlowTight — Record. Create. Release." />
+  <meta property="og:description" content="The music creation studio for recording artists. Available on iOS." />
+  <meta property="og:image" content="https://res.cloudinary.com/dcfagqjvf/image/upload/v1777262665/FlowTight/icon.png" />
   <meta name="theme-color" content="#0a0a0a" />
+  <link rel="icon" type="image/png" sizes="32x32" href="https://res.cloudinary.com/dcfagqjvf/image/upload/f_auto,q_auto,w_32/v1777262661/FlowTight/favicon.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="https://res.cloudinary.com/dcfagqjvf/image/upload/f_auto,q_auto,w_180/v1777262662/FlowTight/adaptive-icon.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
@@ -55,6 +57,9 @@
     }
 
     .nav-logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
       font-size: 20px;
       font-weight: 800;
       letter-spacing: -0.5px;
@@ -62,6 +67,13 @@
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
+    }
+
+    .nav-icon {
+      width: 30px;
+      height: 30px;
+      border-radius: 8px;
+      flex-shrink: 0;
     }
 
     .nav-cta {
@@ -185,39 +197,13 @@
       color: var(--dim);
     }
 
-    /* ── Phone Mockup ──────────────────────────────────────── */
+    /* ── Hero Phones ───────────────────────────────────────── */
     .phone-wrap {
       display: flex;
       justify-content: center;
       align-items: center;
       position: relative;
       z-index: 1;
-    }
-
-    .phone {
-      width: 280px;
-      height: 560px;
-      background: #0e0e0e;
-      border-radius: 44px;
-      border: 2px solid rgba(255,255,255,0.12);
-      box-shadow:
-        0 0 0 6px rgba(255,255,255,0.03),
-        0 40px 80px rgba(0,0,0,0.6),
-        inset 0 1px 0 rgba(255,255,255,0.06);
-      position: relative;
-      overflow: hidden;
-      padding: 18px;
-    }
-
-    .phone::before {
-      content: '';
-      position: absolute;
-      top: 14px; left: 50%;
-      transform: translateX(-50%);
-      width: 80px; height: 6px;
-      background: rgba(255,255,255,0.12);
-      border-radius: 3px;
-      z-index: 10;
     }
 
     .phone-glow {
@@ -228,120 +214,39 @@
       pointer-events: none;
     }
 
-    .phone-screen {
-      width: 100%; height: 100%;
-      background: #080808;
-      border-radius: 32px;
-      padding: 32px 16px 16px;
+    .hero-phones {
       display: flex;
-      flex-direction: column;
-      gap: 10px;
-      overflow: hidden;
-    }
-
-    .mock-label {
-      font-size: 9px;
-      font-weight: 700;
-      letter-spacing: 1.5px;
-      color: var(--muted);
-      font-family: 'Space Mono', monospace;
-    }
-    .mock-title {
-      font-size: 22px;
-      font-weight: 800;
-      letter-spacing: -0.5px;
-      background: linear-gradient(90deg, var(--purple), var(--red));
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-    }
-
-    .mock-waveform {
-      display: flex;
-      align-items: flex-end;
-      gap: 3px;
-      height: 36px;
-      margin: 4px 0;
-    }
-    .mock-bar {
-      flex: 1;
-      background: linear-gradient(180deg, var(--purple), var(--red));
-      border-radius: 2px;
-      opacity: 0.7;
-    }
-
-    .mock-seekbar {
-      height: 3px;
-      background: var(--elevated);
-      border-radius: 2px;
-      overflow: hidden;
-    }
-    .mock-seek-fill {
-      width: 45%;
-      height: 100%;
-      background: linear-gradient(90deg, var(--purple), var(--red));
-      border-radius: 2px;
-    }
-
-    .mock-controls {
-      display: flex;
+      gap: 16px;
       align-items: center;
-      justify-content: center;
-      gap: 18px;
-      margin: 6px 0;
-    }
-    .mock-ctrl {
-      width: 28px; height: 28px;
-      border-radius: 14px;
-      background: var(--elevated);
-      border: 1px solid var(--border);
-    }
-    .mock-play {
-      width: 52px; height: 52px;
-      border-radius: 26px;
-      background: linear-gradient(135deg, var(--purple), var(--red));
-      box-shadow: 0 0 20px rgba(155,89,255,0.4);
+      position: relative;
     }
 
-    .mock-card {
-      background: var(--elevated);
-      border: 1px solid var(--border);
-      border-radius: 14px;
-      padding: 12px;
-      display: flex;
-      flex-direction: column;
-      gap: 6px;
-    }
-    .mock-card-label {
-      font-size: 8px;
-      font-weight: 700;
-      letter-spacing: 1.5px;
-      color: var(--purple);
-      font-family: 'Space Mono', monospace;
-    }
-    .mock-tag-row { display: flex; gap: 5px; flex-wrap: wrap; }
-    .mock-tag {
-      background: rgba(155,89,255,0.15);
-      border: 1px solid rgba(155,89,255,0.25);
-      border-radius: 6px;
-      padding: 3px 8px;
-      font-size: 8px;
-      color: var(--purple);
-      font-weight: 600;
+    .hero-phone {
+      width: 196px;
+      height: 424px;
+      background: #0e0e0e;
+      border-radius: 44px;
+      border: 2px solid rgba(255,255,255,0.12);
+      box-shadow:
+        0 0 0 6px rgba(255,255,255,0.03),
+        0 40px 80px rgba(0,0,0,0.6);
+      overflow: hidden;
+      flex-shrink: 0;
     }
 
-    .mock-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 3px;
+    .hero-phone:first-child {
+      transform: rotate(-3deg) translateY(20px);
     }
-    .mock-step {
-      height: 10px;
-      border-radius: 2px;
-      background: var(--surface);
-      border: 1px solid var(--border);
+    .hero-phone:last-child {
+      transform: rotate(3deg) translateY(-20px);
     }
-    .mock-step.on { background: linear-gradient(135deg, var(--purple), var(--red)); border-color: transparent; }
+
+    .hero-phone img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
 
     /* ── Section Shared ────────────────────────────────────── */
     section {
@@ -416,6 +321,60 @@
       font-size: 14px;
       color: var(--muted);
       line-height: 1.65;
+    }
+
+    /* ── Screenshots Section ───────────────────────────────── */
+    .screenshots-section {
+      padding: 80px 0 0;
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      overflow: hidden;
+    }
+
+    .screenshots-header {
+      text-align: center;
+      padding: 0 80px 52px;
+    }
+    .screenshots-header .section-sub { margin: 0 auto; }
+
+    .screenshots-scroll {
+      display: flex;
+      gap: 16px;
+      overflow-x: auto;
+      padding: 0 80px 56px;
+      scroll-snap-type: x mandatory;
+      scrollbar-width: thin;
+      scrollbar-color: rgba(255,255,255,0.1) transparent;
+      -webkit-overflow-scrolling: touch;
+    }
+    .screenshots-scroll::-webkit-scrollbar { height: 4px; }
+    .screenshots-scroll::-webkit-scrollbar-track { background: transparent; }
+    .screenshots-scroll::-webkit-scrollbar-thumb {
+      background: rgba(255,255,255,0.12);
+      border-radius: 2px;
+    }
+
+    .screenshot-phone {
+      flex-shrink: 0;
+      width: 210px;
+      height: 454px;
+      background: #0e0e0e;
+      border-radius: 40px;
+      border: 2px solid rgba(255,255,255,0.1);
+      overflow: hidden;
+      scroll-snap-align: start;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+      transition: transform 0.2s, border-color 0.2s;
+    }
+    .screenshot-phone:hover {
+      transform: translateY(-6px);
+      border-color: rgba(155,89,255,0.35);
+    }
+    .screenshot-phone img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
     }
 
     /* ── Flow Section ──────────────────────────────────────── */
@@ -564,6 +523,76 @@
       box-shadow: 0 12px 40px rgba(155,89,255,0.5);
     }
 
+    /* ── Founders ──────────────────────────────────────────── */
+    .founders-section {
+      background: var(--surface);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .founders-header {
+      text-align: center;
+      margin-bottom: 56px;
+    }
+    .founders-header .section-sub { margin: 0 auto; }
+
+    .founders-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+      max-width: 860px;
+      margin: 0 auto;
+    }
+
+    .founder-card {
+      background: var(--elevated);
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      padding: 32px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      transition: border-color 0.2s, transform 0.2s;
+    }
+    .founder-card:hover {
+      border-color: rgba(155,89,255,0.35);
+      transform: translateY(-3px);
+    }
+
+    .founder-photo {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      object-fit: cover;
+      object-position: top center;
+      border: 2px solid rgba(155,89,255,0.3);
+      flex-shrink: 0;
+    }
+
+    .founder-name {
+      font-size: 19px;
+      font-weight: 800;
+      letter-spacing: -0.4px;
+      margin-bottom: 4px;
+    }
+
+    .founder-title {
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 1.2px;
+      color: var(--purple);
+    }
+
+    .founder-bio {
+      font-size: 14px;
+      color: var(--muted);
+      line-height: 1.7;
+    }
+
+    @media (max-width: 700px) {
+      .founders-grid { grid-template-columns: 1fr; }
+    }
+
     /* ── Divider ───────────────────────────────────────────── */
     .divider {
       height: 1px;
@@ -627,6 +656,9 @@
 
       .features-grid { grid-template-columns: 1fr; }
 
+      .screenshots-header { padding: 0 24px 40px; }
+      .screenshots-scroll { padding: 0 24px 48px; }
+
       .flow-section {
         grid-template-columns: 1fr;
         gap: 40px;
@@ -645,7 +677,7 @@
     }
 
     @media (max-width: 600px) {
-      .phone { width: 240px; height: 480px; }
+      .hero-phone { width: 160px; height: 346px; }
       .flow-patterns { grid-template-columns: 1fr; }
       .pro-card { padding: 40px 24px; }
     }
@@ -655,7 +687,14 @@
 
   <!-- Nav -->
   <nav>
-    <span class="nav-logo">FlowTight</span>
+    <span class="nav-logo">
+      <img
+        src="https://res.cloudinary.com/dcfagqjvf/image/upload/v1777262661/FlowTight/favicon.png"
+        alt="FlowTight"
+        class="nav-icon"
+      />
+      FlowTight
+    </span>
     <a href="#download" class="nav-cta">
       <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
         <path d="M13.5 10.5C13.1 12.3 11.4 14 9.5 14.5C8.2 14.8 7.1 14.4 6.2 13.8C5.5 13.3 4.8 13 4 13C3.2 13 2.5 13.3 1.8 13.8C1.3 14.1 0.9 14.2 0.5 14.2C0.2 14.2 0 14 0 13.7C1.4 12.3 2.2 10.5 2.2 8.5C2.2 5.5 4.6 3.1 7.6 3.1C10.6 3.1 13 5.5 13 8.5C13 9.2 12.9 9.9 12.6 10.5H13.5Z" fill="currentColor"/>
@@ -671,11 +710,11 @@
       <span class="hero-label">NOW ON iOS</span>
       <h1>
         Record.<br />
-        Rap.<br />
+        Create.<br />
         <span class="grad">Release.</span>
       </h1>
       <p class="hero-sub">
-        FlowTight is the rap creation studio in your pocket — beat maker, AI flow generator, vocal effects, and built-in commercial licensing.
+        FlowTight is the music creation studio in your pocket — beat maker, AI lyric generator, vocal effects, and built-in commercial licensing. Built for every recording artist.
       </p>
       <div class="hero-actions">
         <a href="#download" class="app-store-btn" id="download">
@@ -693,56 +732,18 @@
 
     <div class="phone-wrap">
       <div class="phone-glow"></div>
-      <div class="phone">
-        <div class="phone-screen">
-          <div class="mock-label">SONG IDEA</div>
-          <div class="mock-title">Late Night Bars</div>
-
-          <div class="mock-waveform">
-            <div class="mock-bar" style="height:55%"></div>
-            <div class="mock-bar" style="height:80%"></div>
-            <div class="mock-bar" style="height:40%"></div>
-            <div class="mock-bar" style="height:95%"></div>
-            <div class="mock-bar" style="height:60%"></div>
-            <div class="mock-bar" style="height:70%"></div>
-            <div class="mock-bar" style="height:45%"></div>
-            <div class="mock-bar" style="height:85%"></div>
-            <div class="mock-bar" style="height:55%"></div>
-            <div class="mock-bar" style="height:65%"></div>
-            <div class="mock-bar" style="height:35%"></div>
-            <div class="mock-bar" style="height:90%"></div>
-            <div class="mock-bar" style="height:50%"></div>
-            <div class="mock-bar" style="height:75%"></div>
-            <div class="mock-bar" style="height:42%"></div>
-            <div class="mock-bar" style="height:68%"></div>
-          </div>
-
-          <div class="mock-seekbar"><div class="mock-seek-fill"></div></div>
-
-          <div class="mock-controls">
-            <div class="mock-ctrl"></div>
-            <div class="mock-play"></div>
-            <div class="mock-ctrl"></div>
-          </div>
-
-          <div class="mock-card">
-            <div class="mock-card-label">FLOW PATTERN</div>
-            <div class="mock-tag-row">
-              <span class="mock-tag">🔥 Triplet</span>
-              <span class="mock-tag">Trap</span>
-              <span class="mock-tag">12–15/bar</span>
-            </div>
-          </div>
-
-          <div class="mock-card">
-            <div class="mock-card-label">BEAT GRID</div>
-            <div class="mock-grid">
-              <div class="mock-step on"></div><div class="mock-step"></div><div class="mock-step"></div><div class="mock-step"></div>
-              <div class="mock-step"></div><div class="mock-step"></div><div class="mock-step on"></div><div class="mock-step"></div>
-              <div class="mock-step on"></div><div class="mock-step on"></div><div class="mock-step on"></div><div class="mock-step on"></div>
-              <div class="mock-step"></div><div class="mock-step on"></div><div class="mock-step"></div><div class="mock-step"></div>
-            </div>
-          </div>
+      <div class="hero-phones">
+        <div class="hero-phone">
+          <img
+            src="https://res.cloudinary.com/dcfagqjvf/image/upload/v1777262782/FlowTight/Simulator_Screenshot_-_Player_2_-_2026-04-26_at_18.05.19.png"
+            alt="FlowTight recording screen"
+          />
+        </div>
+        <div class="hero-phone">
+          <img
+            src="https://res.cloudinary.com/dcfagqjvf/image/upload/v1777262792/FlowTight/Simulator_Screenshot_-_Player_2_-_2026-04-26_at_17.47.54.png"
+            alt="FlowTight beat maker"
+          />
         </div>
       </div>
     </div>
@@ -760,7 +761,7 @@
       <div class="feat-card">
         <div class="feat-emoji">🎤</div>
         <div class="feat-name">Instant Recording</div>
-        <p class="feat-desc">Capture your freestyle the second inspiration hits. One tap, zero latency. Your voice is the instrument.</p>
+        <p class="feat-desc">Capture your voice the second inspiration hits. One tap, zero latency. Your voice is the instrument.</p>
       </div>
       <div class="feat-card">
         <div class="feat-emoji">🥁</div>
@@ -769,13 +770,13 @@
       </div>
       <div class="feat-card">
         <div class="feat-emoji">✍️</div>
-        <div class="feat-name">AI Flow Generator</div>
-        <p class="feat-desc">Pick a flow pattern, drop your topic — AI writes 4 bars in your style. Standard, Triplet, Double Time, Punchline, and more.</p>
+        <div class="feat-name">AI Lyric Generator</div>
+        <p class="feat-desc">Pick a flow pattern, drop your topic — AI writes 4 bars crafted to match the rhythm. Standard, Triplet, Double Time, Melodic, and more.</p>
       </div>
       <div class="feat-card">
         <div class="feat-emoji">🎙</div>
         <div class="feat-name">Vocal Studio</div>
-        <p class="feat-desc">Apply pitch effects, warm your tone, or flip into chipmunk mode. Real-time playback so you hear it before you commit.</p>
+        <p class="feat-desc">Apply pitch effects, warm your tone, or get creative with real-time processing. Hear it before you commit.</p>
       </div>
       <div class="feat-card">
         <div class="feat-emoji">🤖</div>
@@ -790,6 +791,53 @@
     </div>
   </section>
 
+  <!-- Screenshots -->
+  <section class="screenshots-section">
+    <div class="screenshots-header">
+      <div class="section-label">SEE IT IN ACTION</div>
+      <h2 class="section-title">Built for artists who create.</h2>
+      <p class="section-sub">Every tool you need to go from idea to release — all in one app.</p>
+    </div>
+    <div class="screenshots-scroll">
+      <div class="screenshot-phone">
+        <img src="https://res.cloudinary.com/dcfagqjvf/image/upload/v1777262782/FlowTight/Simulator_Screenshot_-_Player_2_-_2026-04-26_at_18.05.14.png" alt="FlowTight app screen" />
+      </div>
+      <div class="screenshot-phone">
+        <img src="https://res.cloudinary.com/dcfagqjvf/image/upload/v1777262791/FlowTight/Simulator_Screenshot_-_Player_2_-_2026-04-26_at_02.31.13.png" alt="FlowTight app screen" />
+      </div>
+      <div class="screenshot-phone">
+        <img src="https://res.cloudinary.com/dcfagqjvf/image/upload/v1777262782/FlowTight/Simulator_Screenshot_-_Player_2_-_2026-04-26_at_18.05.19.png" alt="FlowTight app screen" />
+      </div>
+      <div class="screenshot-phone">
+        <img src="https://res.cloudinary.com/dcfagqjvf/image/upload/v1777262782/FlowTight/Simulator_Screenshot_-_Player_2_-_2026-04-26_at_18.05.22.png" alt="FlowTight app screen" />
+      </div>
+      <div class="screenshot-phone">
+        <img src="https://res.cloudinary.com/dcfagqjvf/image/upload/v1777262782/FlowTight/Simulator_Screenshot_-_Player_2_-_2026-04-26_at_18.05.26.png" alt="FlowTight app screen" />
+      </div>
+      <div class="screenshot-phone">
+        <img src="https://res.cloudinary.com/dcfagqjvf/image/upload/v1777262782/FlowTight/Simulator_Screenshot_-_Player_2_-_2026-04-26_at_18.05.41.png" alt="FlowTight app screen" />
+      </div>
+      <div class="screenshot-phone">
+        <img src="https://res.cloudinary.com/dcfagqjvf/image/upload/v1777262791/FlowTight/Simulator_Screenshot_-_Player_2_-_2026-04-26_at_03.27.58.png" alt="FlowTight app screen" />
+      </div>
+      <div class="screenshot-phone">
+        <img src="https://res.cloudinary.com/dcfagqjvf/image/upload/v1777262792/FlowTight/Simulator_Screenshot_-_Player_2_-_2026-04-26_at_10.56.44.png" alt="FlowTight app screen" />
+      </div>
+      <div class="screenshot-phone">
+        <img src="https://res.cloudinary.com/dcfagqjvf/image/upload/v1777262792/FlowTight/Simulator_Screenshot_-_Player_2_-_2026-04-26_at_17.19.14.png" alt="FlowTight app screen" />
+      </div>
+      <div class="screenshot-phone">
+        <img src="https://res.cloudinary.com/dcfagqjvf/image/upload/v1777262792/FlowTight/Simulator_Screenshot_-_Player_2_-_2026-04-26_at_17.47.54.png" alt="FlowTight app screen" />
+      </div>
+      <div class="screenshot-phone">
+        <img src="https://res.cloudinary.com/dcfagqjvf/image/upload/v1777262793/FlowTight/Simulator_Screenshot_-_Player_2_-_2026-04-26_at_18.04.57.png" alt="FlowTight app screen" />
+      </div>
+      <div class="screenshot-phone">
+        <img src="https://res.cloudinary.com/dcfagqjvf/image/upload/v1777262793/FlowTight/Simulator_Screenshot_-_Player_2_-_2026-04-26_at_18.05.03.png" alt="FlowTight app screen" />
+      </div>
+    </div>
+  </section>
+
   <div class="divider"></div>
 
   <!-- Flow Section -->
@@ -797,9 +845,9 @@
     <div class="flow-section">
       <div>
         <div class="section-label">FLOW GENERATOR</div>
-        <h2 class="section-title">7 flows.<br />Infinite bars.</h2>
+        <h2 class="section-title">7 flows.<br />Infinite lyrics.</h2>
         <p class="section-sub">
-          Every great verse starts with the right pattern. FlowTight's AI generates bars built around your chosen flow — not just random lyrics.
+          Every great verse starts with the right pattern. FlowTight's AI generates lyrics built around your chosen flow and rhythm — not just random words.
         </p>
       </div>
       <div class="flow-patterns">
@@ -880,12 +928,48 @@
     </div>
   </section>
 
+  <!-- Founders -->
+  <section class="founders-section">
+    <div class="founders-header">
+      <div class="section-label">THE TEAM</div>
+      <h2 class="section-title">Built by creators,<br />for creators.</h2>
+      <p class="section-sub">FlowTight was founded by engineers and artists who know what it takes to bring music to life.</p>
+    </div>
+    <div class="founders-grid">
+      <div class="founder-card">
+        <img
+          src="https://res.cloudinary.com/dcfagqjvf/image/upload/v1777263819/FlowTight/1693927310758.jpg"
+          alt="Donte Burney"
+          class="founder-photo"
+        />
+        <div>
+          <div class="founder-name">Donte Burney</div>
+          <div class="founder-title">FOUNDER & CTO</div>
+        </div>
+        <p class="founder-bio">Donte is the Founder and CTO, bringing deep expertise in software engineering and product development. He previously worked as an engineer at LinkedIn and TMZ, where he contributed to building scalable, high-performance platforms used by millions. Donte leads the company's technical vision, architecture, and product innovation.</p>
+      </div>
+      <div class="founder-card">
+        <img
+          src="https://res.cloudinary.com/dcfagqjvf/image/upload/v1774310417/brother-jill/IMG_7821.jpg"
+          alt="Eric Jones"
+          class="founder-photo"
+        />
+        <div>
+          <div class="founder-name">Eric "Ric Jilla" Jones</div>
+          <div class="founder-title">CO-FOUNDER & CMO</div>
+        </div>
+        <p class="founder-bio">Eric Jones, professionally known as Ric Jilla, is Co-Founder and Chief Marketing Officer. With a background as a recording artist, he brings a unique blend of creativity, branding expertise, and audience engagement to the company. Eric leads marketing strategy, brand development, and user growth, leveraging cultural insight to connect with diverse audiences.</p>
+      </div>
+    </div>
+  </section>
+
   <!-- Footer -->
   <div class="divider"></div>
   <footer>
     <span class="footer-logo">FlowTight</span>
     <ul class="footer-links">
-      <li><a href="privacy.html">Privacy Policy</a></li>
+      <li><a href="/terms/">Terms of Service</a></li>
+      <li><a href="/privacy/">Privacy Policy</a></li>
       <li><a href="mailto:support@flowtight.app">Support</a></li>
     </ul>
     <span class="footer-copy">© 2025 FlowTight. All rights reserved.</span>

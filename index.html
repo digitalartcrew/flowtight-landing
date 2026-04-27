@@ -388,7 +388,12 @@
       50% { opacity: 0.4; }
     }
 
-    .badge-icon { font-size: 22px; line-height: 1; }
+    .badge-icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
     .badge-text-title {
       font-size: 13px;
       font-weight: 700;
@@ -459,9 +464,18 @@
       transform: translateY(-3px);
     }
 
-    .feat-emoji {
-      font-size: 32px;
-      margin-bottom: 16px;
+    .feat-icon {
+      width: 52px;
+      height: 52px;
+      border-radius: 14px;
+      background: rgba(155,89,255,0.1);
+      border: 1px solid rgba(155,89,255,0.18);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 20px;
+      color: var(--purple);
+      flex-shrink: 0;
     }
     .feat-name {
       font-size: 17px;
@@ -558,7 +572,15 @@
       gap: 8px;
       margin-bottom: 4px;
     }
-    .flow-pill-emoji { font-size: 18px; }
+    .flow-pill-icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--purple);
+      flex-shrink: 0;
+      width: 20px;
+      height: 20px;
+    }
     .flow-pill-name {
       font-size: 13px;
       font-weight: 700;
@@ -891,8 +913,8 @@
         </div>
         <div class="stat-div"></div>
         <div class="stat-item">
-          <span class="stat-num">30s</span>
-          <span class="stat-label">AI beat generation</span>
+          <span class="stat-num">7</span>
+          <span class="stat-label">lyric flow styles</span>
         </div>
         <div class="stat-div"></div>
         <div class="stat-item">
@@ -909,7 +931,16 @@
 
       <div class="float-badge float-badge-top">
         <div class="badge-dot green"></div>
-        <span class="badge-icon">🤖</span>
+        <span class="badge-icon" style="color:#22c55e;">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
+            <rect x="4.5" y="4.5" width="11" height="11" rx="2"/>
+            <path d="M7 4.5V2.5M10 4.5V2.5M13 4.5V2.5"/>
+            <path d="M7 17.5v-2M10 17.5v-2M13 17.5v-2"/>
+            <path d="M4.5 7H2.5M4.5 10H2.5M4.5 13H2.5"/>
+            <path d="M17.5 7h-2M17.5 10h-2M17.5 13h-2"/>
+            <rect x="8" y="8" width="4" height="4" rx="0.75" fill="currentColor" stroke="none" opacity="0.5"/>
+          </svg>
+        </span>
         <div>
           <div class="badge-text-title">Beat generated</div>
           <div class="badge-text-sub">28 sec · AI · Trap</div>
@@ -926,7 +957,14 @@
 
       <div class="float-badge float-badge-bottom">
         <div class="badge-dot purple"></div>
-        <span class="badge-icon">✍️</span>
+        <span class="badge-icon" style="color:var(--purple);">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+            <path d="M10 2l1.4 4.2 4.6 1.3-4.6 1.3L10 13l-1.4-4.2L4 7.5l4.6-1.3L10 2z"/>
+            <path d="M16.5 1.5l.6 1.8 1.9.6-1.9.6-.6 1.8-.6-1.8-1.9-.6 1.9-.6.6-1.8z"/>
+            <rect x="2" y="15" width="9" height="1.75" rx="0.875"/>
+            <rect x="2" y="18" width="6" height="1.75" rx="0.875"/>
+          </svg>
+        </span>
         <div>
           <div class="badge-text-title">4 bars written</div>
           <div class="badge-text-sub">Triplet Flow · Trap</div>
@@ -945,32 +983,81 @@
 
     <div class="features-grid">
       <div class="feat-card">
-        <div class="feat-emoji">🎤</div>
+        <div class="feat-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="9" y="2" width="6" height="11" rx="3"/>
+            <path d="M19 10v1a7 7 0 0 1-14 0v-1"/>
+            <line x1="12" y1="18" x2="12" y2="22"/>
+            <line x1="8" y1="22" x2="16" y2="22"/>
+          </svg>
+        </div>
         <div class="feat-name">Instant Recording</div>
         <p class="feat-desc">Capture your voice the second inspiration hits. One tap, zero latency. Your voice is the instrument.</p>
       </div>
       <div class="feat-card">
-        <div class="feat-emoji">🥁</div>
+        <div class="feat-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+            <rect x="2" y="2" width="4.5" height="5.5" rx="1.2"/>
+            <rect x="8.5" y="2" width="4.5" height="5.5" rx="1.2" opacity="0.25"/>
+            <rect x="15" y="2" width="7" height="5.5" rx="1.2"/>
+            <rect x="2" y="9.5" width="4.5" height="5" rx="1.2" opacity="0.25"/>
+            <rect x="8.5" y="9.5" width="4.5" height="5" rx="1.2"/>
+            <rect x="15" y="9.5" width="7" height="5" rx="1.2" opacity="0.25"/>
+            <rect x="2" y="16.5" width="4.5" height="5.5" rx="1.2"/>
+            <rect x="8.5" y="16.5" width="4.5" height="5.5" rx="1.2"/>
+            <rect x="15" y="16.5" width="7" height="5.5" rx="1.2" opacity="0.25"/>
+          </svg>
+        </div>
         <div class="feat-name">Beat Maker</div>
         <p class="feat-desc">16-step drum sequencer with 8 tracks. Load preset patterns for Trap, Boom Bap, Drill, Lo-Fi, and more — or build from scratch.</p>
       </div>
       <div class="feat-card">
-        <div class="feat-emoji">✍️</div>
+        <div class="feat-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M10 3l1.2 3.6 3.8 1.4-3.8 1.4L10 13l-1.2-3.6L5 8l3.8-1.4L10 3z"/>
+            <path d="M18.5 2l.7 2.1 2.1.7-2.1.7-.7 2.1-.7-2.1-2.1-.7 2.1-.7.7-2.1z"/>
+            <rect x="3" y="16.5" width="11" height="1.75" rx="0.875"/>
+            <rect x="3" y="19.75" width="7" height="1.75" rx="0.875"/>
+          </svg>
+        </div>
         <div class="feat-name">AI Lyric Generator</div>
         <p class="feat-desc">Pick a flow pattern, drop your topic — AI writes 4 bars crafted to match the rhythm. Standard, Triplet, Double Time, Melodic, and more.</p>
       </div>
       <div class="feat-card">
-        <div class="feat-emoji">🎙</div>
+        <div class="feat-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+            <rect x="1" y="9.5" width="2.5" height="5" rx="1.25"/>
+            <rect x="5" y="6" width="2.5" height="12" rx="1.25"/>
+            <rect x="9" y="3" width="2.5" height="18" rx="1.25"/>
+            <rect x="13" y="5" width="2.5" height="14" rx="1.25"/>
+            <rect x="17" y="8" width="2.5" height="8" rx="1.25"/>
+            <rect x="21" y="10.5" width="2" height="3" rx="1"/>
+          </svg>
+        </div>
         <div class="feat-name">Vocal Studio</div>
         <p class="feat-desc">Apply pitch effects, warm your tone, or get creative with real-time processing. Hear it before you commit.</p>
       </div>
       <div class="feat-card">
-        <div class="feat-emoji">🤖</div>
+        <div class="feat-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round">
+            <rect x="7" y="7" width="10" height="10" rx="2"/>
+            <path d="M9 7V4M12 7V4M15 7V4"/>
+            <path d="M9 20v-3M12 20v-3M15 20v-3"/>
+            <path d="M7 9H4M7 12H4M7 15H4"/>
+            <path d="M20 9h-3M20 12h-3M20 15h-3"/>
+            <rect x="10" y="10" width="4" height="4" rx="0.75" fill="currentColor" stroke="none" opacity="0.5"/>
+          </svg>
+        </div>
         <div class="feat-name">AI Beat Generation</div>
         <p class="feat-desc">Beatbox a rhythm, pick a vibe, optionally add a photo — AI builds a 30-second original beat from your input.</p>
       </div>
       <div class="feat-card">
-        <div class="feat-emoji">📜</div>
+        <div class="feat-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+            <polyline points="9 12 11 14 15 10"/>
+          </svg>
+        </div>
         <div class="feat-name">Commercial License</div>
         <p class="feat-desc">Every recording gets an auto-generated license ID. Distribute on Spotify, Apple Music, and everywhere else with proof of creation.</p>
       </div>
@@ -994,18 +1081,18 @@
       <div class="screenshot-phone">
         <img src="https://res.cloudinary.com/dcfagqjvf/image/upload/v1777262782/FlowTight/Simulator_Screenshot_-_Player_2_-_2026-04-26_at_18.05.19.png" alt="FlowTight app screen" />
       </div>
-      <div class="screenshot-phone">
+      <!-- <div class="screenshot-phone">
         <img src="https://res.cloudinary.com/dcfagqjvf/image/upload/v1777262782/FlowTight/Simulator_Screenshot_-_Player_2_-_2026-04-26_at_18.05.22.png" alt="FlowTight app screen" />
-      </div>
+      </div> -->
       <div class="screenshot-phone">
         <img src="https://res.cloudinary.com/dcfagqjvf/image/upload/v1777262782/FlowTight/Simulator_Screenshot_-_Player_2_-_2026-04-26_at_18.05.26.png" alt="FlowTight app screen" />
       </div>
       <div class="screenshot-phone">
         <img src="https://res.cloudinary.com/dcfagqjvf/image/upload/v1777262782/FlowTight/Simulator_Screenshot_-_Player_2_-_2026-04-26_at_18.05.41.png" alt="FlowTight app screen" />
       </div>
-      <div class="screenshot-phone">
+      <!-- <div class="screenshot-phone">
         <img src="https://res.cloudinary.com/dcfagqjvf/image/upload/v1777262791/FlowTight/Simulator_Screenshot_-_Player_2_-_2026-04-26_at_03.27.58.png" alt="FlowTight app screen" />
-      </div>
+      </div> -->
       <div class="screenshot-phone">
         <img src="https://res.cloudinary.com/dcfagqjvf/image/upload/v1777262792/FlowTight/Simulator_Screenshot_-_Player_2_-_2026-04-26_at_10.56.44.png" alt="FlowTight app screen" />
       </div>
@@ -1015,12 +1102,9 @@
       <div class="screenshot-phone">
         <img src="https://res.cloudinary.com/dcfagqjvf/image/upload/v1777262792/FlowTight/Simulator_Screenshot_-_Player_2_-_2026-04-26_at_17.47.54.png" alt="FlowTight app screen" />
       </div>
-      <div class="screenshot-phone">
-        <img src="https://res.cloudinary.com/dcfagqjvf/image/upload/v1777262793/FlowTight/Simulator_Screenshot_-_Player_2_-_2026-04-26_at_18.04.57.png" alt="FlowTight app screen" />
-      </div>
-      <div class="screenshot-phone">
+      <!-- <div class="screenshot-phone">
         <img src="https://res.cloudinary.com/dcfagqjvf/image/upload/v1777262793/FlowTight/Simulator_Screenshot_-_Player_2_-_2026-04-26_at_18.05.03.png" alt="FlowTight app screen" />
-      </div>
+      </div> -->
     </div>
   </section>
 
@@ -1039,49 +1123,49 @@
       <div class="flow-patterns">
         <div class="flow-pill">
           <div class="flow-pill-top">
-            <span class="flow-pill-emoji">🎤</span>
+            <span class="flow-pill-icon"><svg width="18" height="18" viewBox="0 0 18 18" fill="currentColor"><rect x="1" y="5" width="2.5" height="11" rx="1.25"/><rect x="5" y="3" width="2.5" height="13" rx="1.25"/><rect x="9" y="6" width="2.5" height="10" rx="1.25"/><rect x="13" y="4" width="2.5" height="12" rx="1.25"/></svg></span>
             <span class="flow-pill-name">Standard</span>
           </div>
           <div class="flow-pill-syl">8–10 syllables/bar</div>
         </div>
         <div class="flow-pill">
           <div class="flow-pill-top">
-            <span class="flow-pill-emoji">🔥</span>
+            <span class="flow-pill-icon"><svg width="18" height="18" viewBox="0 0 18 18" fill="currentColor"><circle cx="3" cy="14" r="2.5"/><circle cx="9" cy="10" r="2.5"/><circle cx="15" cy="6" r="2.5"/></svg></span>
             <span class="flow-pill-name">Triplet</span>
           </div>
           <div class="flow-pill-syl">12–15 syllables/bar</div>
         </div>
         <div class="flow-pill">
           <div class="flow-pill-top">
-            <span class="flow-pill-emoji">⚡</span>
+            <span class="flow-pill-icon"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round"><polyline points="1,4 7,9 1,14"/><polyline points="9,4 15,9 9,14"/></svg></span>
             <span class="flow-pill-name">Double Time</span>
           </div>
           <div class="flow-pill-syl">16–20 syllables/bar</div>
         </div>
         <div class="flow-pill">
           <div class="flow-pill-top">
-            <span class="flow-pill-emoji">🌊</span>
+            <span class="flow-pill-icon"><svg width="18" height="18" viewBox="0 0 18 18" fill="currentColor"><rect x="1" y="8" width="2.5" height="8" rx="1.25"/><rect x="5" y="4" width="2.5" height="12" rx="1.25" opacity="0.45"/><rect x="9" y="6" width="2.5" height="10" rx="1.25"/><rect x="13" y="2" width="2.5" height="14" rx="1.25" opacity="0.45"/></svg></span>
             <span class="flow-pill-name">Syncopated</span>
           </div>
           <div class="flow-pill-syl">10–12 syllables/bar</div>
         </div>
         <div class="flow-pill">
           <div class="flow-pill-top">
-            <span class="flow-pill-emoji">🎵</span>
+            <span class="flow-pill-icon"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round"><path d="M1 9C3.5 3 5.5 3 9 9S14.5 15 17 9"/></svg></span>
             <span class="flow-pill-name">Melodic</span>
           </div>
           <div class="flow-pill-syl">6–8 syllables/bar</div>
         </div>
         <div class="flow-pill">
           <div class="flow-pill-top">
-            <span class="flow-pill-emoji">💥</span>
+            <span class="flow-pill-icon"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.75"><circle cx="9" cy="9" r="7.5"/><circle cx="9" cy="9" r="4"/><circle cx="9" cy="9" r="1.5" fill="currentColor" stroke="none"/></svg></span>
             <span class="flow-pill-name">Punchline</span>
           </div>
           <div class="flow-pill-syl">Setup + knockout</div>
         </div>
         <div class="flow-pill">
           <div class="flow-pill-top">
-            <span class="flow-pill-emoji">🥊</span>
+            <span class="flow-pill-icon"><svg width="18" height="18" viewBox="0 0 18 18" fill="currentColor"><path d="M10.5 2L4 10.5H9L7.5 16L14 7.5H9Z"/></svg></span>
             <span class="flow-pill-name">Punches</span>
           </div>
           <div class="flow-pill-syl">4–6 syllables/bar</div>

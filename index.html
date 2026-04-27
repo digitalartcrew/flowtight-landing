@@ -4,9 +4,9 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>FlowTight — Record. Create. Release.</title>
-  <meta name="description" content="FlowTight is the music creation studio in your pocket. Beat maker, AI lyric generator, vocal effects, and commercial licensing — built for every recording artist." />
+  <meta name="description" content="FlowTight is the AI-powered music creation studio in your pocket. Beat maker, lyric generator, vocal effects, and commercial licensing — built for every recording artist." />
   <meta property="og:title" content="FlowTight — Record. Create. Release." />
-  <meta property="og:description" content="The music creation studio for recording artists. Available on iOS." />
+  <meta property="og:description" content="The AI-powered music creation studio for recording artists. Available on iOS." />
   <meta property="og:image" content="https://res.cloudinary.com/dcfagqjvf/image/upload/v1777262665/FlowTight/icon.png" />
   <meta name="theme-color" content="#0a0a0a" />
   <link rel="icon" type="image/png" sizes="32x32" href="https://res.cloudinary.com/dcfagqjvf/image/upload/f_auto,q_auto,w_32/v1777262661/FlowTight/favicon.png" />
@@ -51,8 +51,8 @@
       justify-content: space-between;
       padding: 0 40px;
       height: 64px;
-      background: rgba(8,8,8,0.85);
-      backdrop-filter: blur(16px);
+      background: rgba(8,8,8,0.88);
+      backdrop-filter: blur(20px);
       border-bottom: 1px solid var(--border);
     }
 
@@ -101,10 +101,10 @@
     .hero {
       min-height: 100vh;
       display: grid;
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1.15fr;
       align-items: center;
-      gap: 60px;
-      padding: 120px 80px 80px;
+      gap: 40px;
+      padding: 130px 80px 100px;
       position: relative;
       overflow: hidden;
     }
@@ -112,18 +112,26 @@
     .hero::before {
       content: '';
       position: absolute;
-      top: -200px; left: -200px;
-      width: 700px; height: 700px;
-      background: radial-gradient(circle, rgba(155,89,255,0.12) 0%, transparent 70%);
+      top: -300px; left: -300px;
+      width: 800px; height: 800px;
+      background: radial-gradient(circle, rgba(155,89,255,0.1) 0%, transparent 65%);
       pointer-events: none;
     }
     .hero::after {
       content: '';
       position: absolute;
-      bottom: -100px; right: -100px;
-      width: 500px; height: 500px;
-      background: radial-gradient(circle, rgba(0,229,255,0.07) 0%, transparent 70%);
+      bottom: -200px; right: 0;
+      width: 600px; height: 600px;
+      background: radial-gradient(circle, rgba(0,229,255,0.06) 0%, transparent 65%);
       pointer-events: none;
+    }
+
+    .hero-badges {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-bottom: 24px;
     }
 
     .hero-label {
@@ -136,15 +144,28 @@
       border: 1px solid rgba(155,89,255,0.25);
       border-radius: 20px;
       padding: 5px 14px;
-      margin-bottom: 24px;
+    }
+
+    .hero-label-ai {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      color: var(--cyan);
+      background: rgba(0,229,255,0.08);
+      border: 1px solid rgba(0,229,255,0.2);
+      border-radius: 20px;
+      padding: 5px 14px;
     }
 
     .hero h1 {
-      font-size: clamp(42px, 5vw, 68px);
+      font-size: clamp(48px, 5.5vw, 78px);
       font-weight: 800;
-      line-height: 1.05;
-      letter-spacing: -1.5px;
-      margin-bottom: 20px;
+      line-height: 1.02;
+      letter-spacing: -2px;
+      margin-bottom: 22px;
     }
 
     .hero h1 .grad {
@@ -197,55 +218,186 @@
       color: var(--dim);
     }
 
-    /* ── Hero Phones ───────────────────────────────────────── */
+    .hero-stats {
+      display: flex;
+      align-items: center;
+      margin-top: 36px;
+      padding-top: 28px;
+      border-top: 1px solid var(--border);
+    }
+
+    .stat-item { flex: 1; }
+
+    .stat-num {
+      display: block;
+      font-size: 26px;
+      font-weight: 800;
+      letter-spacing: -1px;
+      background: linear-gradient(135deg, var(--purple), var(--cyan));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 2px;
+    }
+
+    .stat-label {
+      font-size: 11px;
+      color: var(--muted);
+      font-weight: 500;
+      letter-spacing: 0.3px;
+    }
+
+    .stat-div {
+      width: 1px;
+      height: 36px;
+      background: var(--border);
+      margin: 0 20px;
+      flex-shrink: 0;
+    }
+
+    /* ── Hero Phone ────────────────────────────────────────── */
     .phone-wrap {
       display: flex;
       justify-content: center;
       align-items: center;
       position: relative;
       z-index: 1;
+      min-height: 720px;
+      overflow: visible;
     }
 
-    .phone-glow {
+    .phone-halo-purple {
       position: absolute;
-      top: -80px; left: -80px;
-      width: 440px; height: 440px;
-      background: radial-gradient(circle, rgba(155,89,255,0.15) 0%, transparent 60%);
+      width: 580px; height: 580px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(155,89,255,0.22) 0%, transparent 65%);
       pointer-events: none;
+      filter: blur(55px);
+      top: 50%; left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 1;
+      animation: haloPulse 5s ease-in-out infinite;
     }
 
-    .hero-phones {
-      display: flex;
-      gap: 16px;
-      align-items: center;
-      position: relative;
+    .phone-halo-cyan {
+      position: absolute;
+      width: 300px; height: 300px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(0,229,255,0.16) 0%, transparent 65%);
+      pointer-events: none;
+      filter: blur(40px);
+      top: 5%; right: 10%;
+      z-index: 1;
     }
 
-    .hero-phone {
-      width: 196px;
-      height: 424px;
-      background: #0e0e0e;
-      border-radius: 44px;
-      border: 2px solid rgba(255,255,255,0.12);
+    .phone-halo-red {
+      position: absolute;
+      width: 220px; height: 220px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(255,51,102,0.13) 0%, transparent 65%);
+      pointer-events: none;
+      filter: blur(40px);
+      bottom: 8%; left: 10%;
+      z-index: 1;
+    }
+
+    @keyframes haloPulse {
+      0%, 100% { opacity: 0.85; transform: translate(-50%, -50%) scale(1); }
+      50% { opacity: 0.55; transform: translate(-50%, -50%) scale(1.12); }
+    }
+
+    .hero-phone-main {
+      width: 300px;
+      height: 648px;
+      background: #060606;
+      border-radius: 50px;
+      border: 1.5px solid rgba(255,255,255,0.16);
       box-shadow:
-        0 0 0 6px rgba(255,255,255,0.03),
-        0 40px 80px rgba(0,0,0,0.6);
+        0 0 0 1px rgba(255,255,255,0.04),
+        0 0 0 9px rgba(255,255,255,0.02),
+        0 70px 140px rgba(0,0,0,0.9),
+        0 0 100px rgba(155,89,255,0.22),
+        inset 0 1px 0 rgba(255,255,255,0.08);
       overflow: hidden;
+      position: relative;
+      z-index: 5;
       flex-shrink: 0;
     }
 
-    .hero-phone:first-child {
-      transform: rotate(-3deg) translateY(20px);
-    }
-    .hero-phone:last-child {
-      transform: rotate(3deg) translateY(-20px);
-    }
-
-    .hero-phone img {
+    .hero-phone-main img {
       width: 100%;
       height: 100%;
       object-fit: cover;
       display: block;
+    }
+
+    .float-badge {
+      position: absolute;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      background: rgba(12,12,12,0.95);
+      border: 1px solid rgba(155,89,255,0.28);
+      border-radius: 18px;
+      padding: 14px 18px;
+      backdrop-filter: blur(24px);
+      -webkit-backdrop-filter: blur(24px);
+      z-index: 10;
+      box-shadow:
+        0 16px 48px rgba(0,0,0,0.6),
+        0 0 0 1px rgba(255,255,255,0.04),
+        inset 0 1px 0 rgba(255,255,255,0.06);
+      white-space: nowrap;
+    }
+
+    .float-badge-top {
+      top: 72px;
+      left: -60px;
+      animation: badgeFloat 4.5s ease-in-out infinite;
+    }
+
+    .float-badge-bottom {
+      bottom: 96px;
+      right: -50px;
+      animation: badgeFloat 4.5s ease-in-out infinite 2.2s;
+    }
+
+    @keyframes badgeFloat {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-10px); }
+    }
+
+    .badge-dot {
+      width: 8px; height: 8px;
+      border-radius: 50%;
+      flex-shrink: 0;
+      animation: dotPulse 2s ease-in-out infinite;
+    }
+    .badge-dot.green {
+      background: #22c55e;
+      box-shadow: 0 0 8px rgba(34,197,94,0.8);
+    }
+    .badge-dot.purple {
+      background: var(--purple);
+      box-shadow: 0 0 8px rgba(155,89,255,0.8);
+      animation-delay: 1s;
+    }
+
+    @keyframes dotPulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.4; }
+    }
+
+    .badge-icon { font-size: 22px; line-height: 1; }
+    .badge-text-title {
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 2px;
+    }
+    .badge-text-sub {
+      font-size: 11px;
+      color: var(--muted);
     }
 
     /* ── Section Shared ────────────────────────────────────── */
@@ -589,10 +741,6 @@
       line-height: 1.7;
     }
 
-    @media (max-width: 700px) {
-      .founders-grid { grid-template-columns: 1fr; }
-    }
-
     /* ── Divider ───────────────────────────────────────────── */
     .divider {
       height: 1px;
@@ -648,9 +796,13 @@
         text-align: center;
       }
       .hero::before, .hero::after { display: none; }
+      .hero-badges { justify-content: center; }
       .hero-sub { margin: 0 auto 36px; }
       .hero-actions { justify-content: center; }
-      .phone-wrap { order: -1; }
+      .hero-stats { justify-content: center; }
+      .phone-wrap { order: -1; min-height: auto; padding: 20px 0 60px; }
+      .float-badge { display: none; }
+      .hero-phone-main { width: 260px; height: 562px; }
 
       section { padding: 72px 24px; }
 
@@ -665,6 +817,7 @@
       }
 
       .pro-perks { grid-template-columns: 1fr; }
+      .founders-grid { grid-template-columns: 1fr; }
 
       .divider { margin: 0 24px; }
 
@@ -677,7 +830,7 @@
     }
 
     @media (max-width: 600px) {
-      .hero-phone { width: 160px; height: 346px; }
+      .hero-phone-main { width: 220px; height: 476px; }
       .flow-patterns { grid-template-columns: 1fr; }
       .pro-card { padding: 40px 24px; }
     }
@@ -707,14 +860,17 @@
   <!-- Hero -->
   <section class="hero">
     <div class="hero-content">
-      <span class="hero-label">NOW ON iOS</span>
+      <div class="hero-badges">
+        <span class="hero-label">NOW ON iOS</span>
+        <span class="hero-label-ai">✦ AI-POWERED</span>
+      </div>
       <h1>
         Record.<br />
         Create.<br />
         <span class="grad">Release.</span>
       </h1>
       <p class="hero-sub">
-        FlowTight is the music creation studio in your pocket — beat maker, AI lyric generator, vocal effects, and built-in commercial licensing. Built for every recording artist.
+        FlowTight is the AI-powered music studio in your pocket — beat maker, lyric generator, vocal effects, and built-in commercial licensing. Built for every recording artist.
       </p>
       <div class="hero-actions">
         <a href="#download" class="app-store-btn" id="download">
@@ -728,22 +884,52 @@
         </a>
         <span class="hero-note">Free to download · iOS 16+</span>
       </div>
+      <div class="hero-stats">
+        <div class="stat-item">
+          <span class="stat-num">6</span>
+          <span class="stat-label">AI-powered tools</span>
+        </div>
+        <div class="stat-div"></div>
+        <div class="stat-item">
+          <span class="stat-num">30s</span>
+          <span class="stat-label">AI beat generation</span>
+        </div>
+        <div class="stat-div"></div>
+        <div class="stat-item">
+          <span class="stat-num">1-tap</span>
+          <span class="stat-label">Commercial license</span>
+        </div>
+      </div>
     </div>
 
     <div class="phone-wrap">
-      <div class="phone-glow"></div>
-      <div class="hero-phones">
-        <div class="hero-phone">
-          <img
-            src="https://res.cloudinary.com/dcfagqjvf/image/upload/v1777262782/FlowTight/Simulator_Screenshot_-_Player_2_-_2026-04-26_at_18.05.19.png"
-            alt="FlowTight recording screen"
-          />
+      <div class="phone-halo-purple"></div>
+      <div class="phone-halo-cyan"></div>
+      <div class="phone-halo-red"></div>
+
+      <div class="float-badge float-badge-top">
+        <div class="badge-dot green"></div>
+        <span class="badge-icon">🤖</span>
+        <div>
+          <div class="badge-text-title">Beat generated</div>
+          <div class="badge-text-sub">28 sec · AI · Trap</div>
         </div>
-        <div class="hero-phone">
-          <img
-            src="https://res.cloudinary.com/dcfagqjvf/image/upload/v1777262792/FlowTight/Simulator_Screenshot_-_Player_2_-_2026-04-26_at_17.47.54.png"
-            alt="FlowTight beat maker"
-          />
+      </div>
+
+      <div class="hero-phone-main">
+        <img
+          src="https://res.cloudinary.com/dcfagqjvf/image/upload/v1777262793/FlowTight/Simulator_Screenshot_-_Player_2_-_2026-04-26_at_18.04.57.png"
+          alt="FlowTight app"
+          loading="eager"
+        />
+      </div>
+
+      <div class="float-badge float-badge-bottom">
+        <div class="badge-dot purple"></div>
+        <span class="badge-icon">✍️</span>
+        <div>
+          <div class="badge-text-title">4 bars written</div>
+          <div class="badge-text-sub">Triplet Flow · Trap</div>
         </div>
       </div>
     </div>

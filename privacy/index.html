@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy — FlowTight</title>
+  <meta name="description" content="FlowTight Privacy Policy" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg: #080808; --surface: #111111; --border: rgba(255,255,255,0.08);
+      --cyan: #00e5ff; --text: #f0f0f0; --muted: #888; --dim: #444;
+    }
+    body { background: var(--bg); color: var(--text); font-family: 'Space Grotesk', sans-serif; line-height: 1.7; }
+    a { color: var(--cyan); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    nav {
+      position: sticky; top: 0; z-index: 100;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 16px 32px; background: rgba(8,8,8,0.92);
+      border-bottom: 1px solid var(--border); backdrop-filter: blur(12px);
+    }
+    .logo { font-size: 18px; font-weight: 800; letter-spacing: -0.5px; color: var(--text); text-decoration: none; }
+    .logo span { color: var(--cyan); }
+    .nav-link { font-size: 14px; color: var(--muted); }
+
+    .container { max-width: 760px; margin: 0 auto; padding: 60px 24px 100px; }
+    .page-label { font-size: 11px; font-weight: 700; letter-spacing: 2px; color: var(--cyan); text-transform: uppercase; margin-bottom: 12px; }
+    h1 { font-size: 40px; font-weight: 800; letter-spacing: -1px; margin-bottom: 8px; }
+    .meta { font-size: 14px; color: var(--muted); margin-bottom: 48px; padding-bottom: 32px; border-bottom: 1px solid var(--border); }
+
+    h2 { font-size: 20px; font-weight: 700; color: var(--text); margin: 40px 0 12px; }
+    p { font-size: 15px; color: #ccc; margin-bottom: 16px; }
+    ul, ol { font-size: 15px; color: #ccc; margin: 0 0 16px 24px; }
+    li { margin-bottom: 8px; }
+    strong { color: var(--text); font-weight: 600; }
+
+    .card {
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: 16px; padding: 24px; margin: 32px 0;
+    }
+    .card p:last-child { margin-bottom: 0; }
+
+    table { width: 100%; border-collapse: collapse; margin: 16px 0 24px; font-size: 14px; }
+    th { text-align: left; padding: 10px 14px; background: var(--surface); color: var(--muted); font-weight: 600; border-bottom: 1px solid var(--border); }
+    td { padding: 10px 14px; color: #ccc; border-bottom: 1px solid rgba(255,255,255,0.04); vertical-align: top; }
+
+    footer {
+      border-top: 1px solid var(--border); padding: 40px 32px;
+      text-align: center; font-size: 13px; color: var(--dim);
+    }
+    footer a { color: var(--muted); }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="/" class="logo">Flow<span>Tight</span></a>
+  <a href="/terms" class="nav-link">Terms of Service</a>
+</nav>
+
+<div class="container">
+  <div class="page-label">Legal</div>
+  <h1>Privacy Policy</h1>
+  <p class="meta">Last updated: April 26, 2025 &nbsp;·&nbsp; Effective: April 26, 2025</p>
+
+  <div class="card">
+    <p>NgneerX Technology LLC ("we," "us," or "our") operates the FlowTight iOS application. This Privacy Policy explains what information we collect, how we use it, and your rights. By using FlowTight you agree to this policy.</p>
+  </div>
+
+  <h2>1. Information We Collect</h2>
+
+  <p><strong>Account information.</strong> When you sign in with Apple or create an email account, we receive your email address and a unique user identifier from Apple or Firebase Authentication. If you use Apple's "Hide My Email" feature, we receive only the relay address Apple provides.</p>
+
+  <p><strong>Usage data.</strong> We track how often you use certain features (e.g., AI beats generated this month) to enforce free-tier limits. This data is stored locally on your device using on-device storage and is associated with your account ID.</p>
+
+  <p><strong>Audio recordings.</strong> Voice memos and vocal takes you record are stored <strong>locally on your device</strong>. They are not uploaded to our servers. When you use AI beat generation, a short audio sample you provide (e.g., a beatboxed rhythm) is sent to a third-party AI service for processing (see Section 3).</p>
+
+  <p><strong>Images.</strong> If you select a photo for AI beat generation, that image is sent to a third-party AI service for processing. It is not stored by us after the beat is generated.</p>
+
+  <p><strong>Purchase information.</strong> Subscription status and purchase history are managed by Apple and RevenueCat. We receive your subscription status (active/expired) and a RevenueCat customer ID, but we do not receive your payment card details.</p>
+
+  <p><strong>Device information.</strong> We may receive basic device information (OS version, device type) for analytics and crash reporting purposes.</p>
+
+  <h2>2. How We Use Your Information</h2>
+
+  <table>
+    <thead>
+      <tr><th>Purpose</th><th>Data used</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Authenticate your account</td><td>Email address, Apple user ID</td></tr>
+      <tr><td>Enforce free-tier usage limits</td><td>AI beat count (stored on-device)</td></tr>
+      <tr><td>Generate AI beats</td><td>Audio sample, selected image, genre/vibe text</td></tr>
+      <tr><td>Manage your subscription</td><td>RevenueCat customer ID, subscription status</td></tr>
+      <tr><td>Improve the service</td><td>Aggregated, anonymized usage patterns</td></tr>
+      <tr><td>Respond to support requests</td><td>Email address, information you provide</td></tr>
+    </tbody>
+  </table>
+
+  <p>We do not sell your personal information. We do not use your data for advertising.</p>
+
+  <h2>3. Third-Party Services</h2>
+  <p>FlowTight uses the following third-party services that may process your data:</p>
+
+  <table>
+    <thead>
+      <tr><th>Service</th><th>Purpose</th><th>Privacy Policy</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Firebase (Google)</strong></td>
+        <td>Authentication, cloud functions</td>
+        <td><a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">firebase.google.com/support/privacy</a></td>
+      </tr>
+      <tr>
+        <td><strong>Apple Sign In</strong></td>
+        <td>Authentication</td>
+        <td><a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">apple.com/legal/privacy</a></td>
+      </tr>
+      <tr>
+        <td><strong>RevenueCat</strong></td>
+        <td>Subscription management</td>
+        <td><a href="https://www.revenuecat.com/privacy" target="_blank" rel="noopener">revenuecat.com/privacy</a></td>
+      </tr>
+      <tr>
+        <td><strong>Google AI (Gemini)</strong></td>
+        <td>AI lyric and flow generation</td>
+        <td><a href="https://ai.google.dev/gemini-api/terms" target="_blank" rel="noopener">ai.google.dev/gemini-api/terms</a></td>
+      </tr>
+      <tr>
+        <td><strong>Replicate</strong></td>
+        <td>AI beat generation from audio/image</td>
+        <td><a href="https://replicate.com/privacy" target="_blank" rel="noopener">replicate.com/privacy</a></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p>When audio or image data is sent to AI services for beat generation, it is processed transiently and is not stored or used to train models under our agreements with those providers. Please review their respective privacy policies for full details.</p>
+
+  <h2>4. Data Storage and Security</h2>
+  <p>Your audio recordings and beat projects are stored <strong>locally on your device</strong> and are not synced to a cloud server. Account data (email, user ID, subscription status) is stored in Firebase, which is hosted on Google Cloud infrastructure in the United States.</p>
+  <p>We use industry-standard security measures to protect your data. However, no method of transmission or storage is 100% secure, and we cannot guarantee absolute security.</p>
+
+  <h2>5. Data Retention</h2>
+  <p>Account data is retained for as long as your account is active. If you delete your account, we will delete your account data within 30 days, except where retention is required by law.</p>
+  <p>Local recordings are retained on your device until you delete them or uninstall the app. We have no access to or control over locally stored data.</p>
+
+  <h2>6. Children's Privacy</h2>
+  <p>FlowTight is not directed to children under 13. We do not knowingly collect personal information from children under 13. If you believe a child under 13 has provided us with personal information, contact us at <a href="mailto:support@flowtight.app">support@flowtight.app</a> and we will delete it promptly.</p>
+
+  <h2>7. Your Rights</h2>
+  <p>Depending on your location, you may have the following rights regarding your personal data:</p>
+  <ul>
+    <li><strong>Access</strong> — request a copy of the data we hold about you</li>
+    <li><strong>Correction</strong> — request correction of inaccurate data</li>
+    <li><strong>Deletion</strong> — request deletion of your account and associated data</li>
+    <li><strong>Portability</strong> — request your data in a portable format</li>
+    <li><strong>Opt-out</strong> — opt out of any non-essential data processing</li>
+  </ul>
+  <p>To exercise any of these rights, contact us at <a href="mailto:support@flowtight.app">support@flowtight.app</a>. We will respond within 30 days.</p>
+
+  <h2>8. California Privacy Rights (CCPA)</h2>
+  <p>If you are a California resident, you have additional rights under the California Consumer Privacy Act. We do not sell personal information. You may request disclosure of the categories of personal information we have collected and the purposes for which it is used by contacting us at <a href="mailto:support@flowtight.app">support@flowtight.app</a>.</p>
+
+  <h2>9. International Users</h2>
+  <p>FlowTight is operated from the United States. If you are located outside the United States, your information may be transferred to and processed in the United States, where data protection laws may differ from those in your country. By using the App, you consent to this transfer.</p>
+
+  <h2>10. Changes to This Policy</h2>
+  <p>We may update this Privacy Policy from time to time. We will notify you of material changes by updating the "Last updated" date above and, where appropriate, through an in-app notification. Your continued use of the App after changes take effect constitutes your acceptance of the revised policy.</p>
+
+  <h2>11. Contact</h2>
+  <p>Questions or concerns about this Privacy Policy?</p>
+  <ul>
+    <li>Email: <a href="mailto:support@flowtight.app">support@flowtight.app</a></li>
+    <li>Website: <a href="https://flowtight.app">flowtight.app</a></li>
+    <li>NgneerX Technology LLC</li>
+  </ul>
+</div>
+
+<footer>
+  <p>&copy; 2025 NgneerX Technology LLC &nbsp;·&nbsp; <a href="/">FlowTight</a> &nbsp;·&nbsp; <a href="/privacy">Privacy Policy</a> &nbsp;·&nbsp; <a href="/terms">Terms of Service</a></p>
+</footer>
+
+</body>
+</html>

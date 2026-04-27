@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Support — FlowTight</title>
+  <meta name="description" content="Get help with FlowTight. FAQs, account help, billing, and how to contact our support team." />
+  <link rel="icon" type="image/png" sizes="32x32" href="https://res.cloudinary.com/dcfagqjvf/image/upload/f_auto,q_auto,w_32/v1777262661/FlowTight/favicon.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="https://res.cloudinary.com/dcfagqjvf/image/upload/f_auto,q_auto,w_180/v1777262662/FlowTight/adaptive-icon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:      #080808;
+      --surface: #111111;
+      --elevated:#181818;
+      --border:  rgba(255,255,255,0.08);
+      --purple:  #9b59ff;
+      --cyan:    #00e5ff;
+      --text:    #f0f0f0;
+      --muted:   #888;
+      --dim:     #444;
+    }
+
+    body { background: var(--bg); color: var(--text); font-family: 'Space Grotesk', sans-serif; line-height: 1.7; }
+    a { color: var(--cyan); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    /* ── Nav ── */
+    nav {
+      position: sticky; top: 0; z-index: 100;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 16px 32px;
+      background: rgba(8,8,8,0.92);
+      border-bottom: 1px solid var(--border);
+      backdrop-filter: blur(16px);
+    }
+    .logo {
+      display: flex; align-items: center; gap: 8px;
+      font-size: 18px; font-weight: 800; letter-spacing: -0.5px;
+      color: var(--text); text-decoration: none;
+    }
+    .logo img { width: 26px; height: 26px; border-radius: 7px; flex-shrink: 0; }
+    .logo span { color: var(--cyan); }
+    .nav-link { font-size: 14px; color: var(--muted); }
+    .nav-link:hover { color: var(--text); text-decoration: none; }
+
+    /* ── Layout ── */
+    .container { max-width: 800px; margin: 0 auto; padding: 60px 24px 100px; }
+
+    .page-label {
+      font-size: 11px; font-weight: 700; letter-spacing: 2px;
+      color: var(--purple); margin-bottom: 12px;
+    }
+    h1 {
+      font-size: 42px; font-weight: 800; letter-spacing: -1.5px;
+      line-height: 1.05; margin-bottom: 16px;
+    }
+    .hero-sub {
+      font-size: 16px; color: var(--muted); max-width: 520px;
+      margin-bottom: 48px; padding-bottom: 40px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    /* ── Contact card ── */
+    .contact-card {
+      background: var(--elevated);
+      border: 1px solid rgba(155,89,255,0.3);
+      border-radius: 20px;
+      padding: 32px;
+      margin-bottom: 56px;
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      align-items: flex-start;
+      gap: 20px;
+    }
+    .contact-card::before {
+      content: '';
+      position: absolute; top: 0; left: 0; right: 0; height: 2px;
+      background: linear-gradient(90deg, var(--purple), var(--cyan));
+    }
+    .contact-icon {
+      width: 48px; height: 48px;
+      border-radius: 12px;
+      background: rgba(155,89,255,0.12);
+      border: 1px solid rgba(155,89,255,0.2);
+      display: flex; align-items: center; justify-content: center;
+      color: var(--purple);
+      flex-shrink: 0;
+    }
+    .contact-body h2 {
+      font-size: 18px; font-weight: 700;
+      letter-spacing: -0.3px; margin-bottom: 6px; color: var(--text);
+    }
+    .contact-body p { font-size: 14px; color: var(--muted); margin-bottom: 16px; }
+    .contact-btn {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: linear-gradient(135deg, var(--purple), #7c4dff);
+      color: #fff; border-radius: 10px;
+      padding: 10px 20px;
+      font-size: 14px; font-weight: 700;
+      text-decoration: none;
+      transition: opacity 0.15s, transform 0.15s;
+    }
+    .contact-btn:hover { opacity: 0.88; transform: translateY(-1px); text-decoration: none; }
+
+    /* ── Section headings ── */
+    .section-heading {
+      font-size: 13px; font-weight: 700;
+      letter-spacing: 1.5px; color: var(--purple);
+      margin-bottom: 16px;
+    }
+
+    /* ── FAQ ── */
+    .faq-list { margin-bottom: 56px; }
+
+    details {
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      margin-bottom: 8px;
+      background: var(--surface);
+      transition: border-color 0.2s;
+    }
+    details[open] { border-color: rgba(155,89,255,0.3); }
+
+    summary {
+      cursor: pointer;
+      padding: 18px 20px;
+      font-size: 15px; font-weight: 600;
+      display: flex; align-items: center; justify-content: space-between;
+      list-style: none;
+      user-select: none;
+    }
+    summary::-webkit-details-marker { display: none; }
+
+    .faq-chevron {
+      width: 20px; height: 20px;
+      color: var(--muted);
+      flex-shrink: 0;
+      transition: transform 0.2s;
+    }
+    details[open] .faq-chevron { transform: rotate(180deg); color: var(--purple); }
+
+    .faq-body {
+      padding: 0 20px 20px;
+      font-size: 14px; color: var(--muted);
+      line-height: 1.7;
+    }
+    .faq-body p { margin-bottom: 10px; }
+    .faq-body p:last-child { margin-bottom: 0; }
+    .faq-body a { color: var(--cyan); }
+
+    /* ── Topic cards ── */
+    .topic-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+      margin-bottom: 56px;
+    }
+    .topic-card {
+      background: var(--elevated);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 22px;
+      transition: border-color 0.2s, transform 0.15s;
+    }
+    .topic-card:hover { border-color: rgba(155,89,255,0.3); transform: translateY(-2px); }
+    .topic-icon {
+      width: 40px; height: 40px;
+      border-radius: 10px;
+      background: rgba(155,89,255,0.1);
+      border: 1px solid rgba(155,89,255,0.15);
+      display: flex; align-items: center; justify-content: center;
+      color: var(--purple);
+      margin-bottom: 14px;
+    }
+    .topic-title {
+      font-size: 15px; font-weight: 700;
+      margin-bottom: 4px; letter-spacing: -0.2px;
+    }
+    .topic-desc { font-size: 13px; color: var(--muted); line-height: 1.5; }
+
+    /* ── Footer ── */
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 40px 32px;
+      text-align: center;
+      font-size: 13px;
+      color: var(--dim);
+    }
+    footer a { color: var(--muted); margin: 0 8px; }
+    footer a:hover { color: var(--text); text-decoration: none; }
+
+    @media (max-width: 600px) {
+      h1 { font-size: 32px; }
+      .contact-card { flex-direction: column; gap: 16px; }
+      .topic-grid { grid-template-columns: 1fr; }
+      nav { padding: 14px 20px; }
+      .container { padding: 40px 20px 80px; }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="/" class="logo">
+    <img src="https://res.cloudinary.com/dcfagqjvf/image/upload/v1777262661/FlowTight/favicon.png" alt="FlowTight" />
+    Flow<span>Tight</span>
+  </a>
+  <a href="/" class="nav-link">Back to Home</a>
+</nav>
+
+<div class="container">
+
+  <div class="page-label">SUPPORT</div>
+  <h1>How can we help?</h1>
+  <p class="hero-sub">Find answers below or reach out directly — we respond to every message.</p>
+
+  <!-- Contact -->
+  <div class="contact-card">
+    <div class="contact-icon">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+        <polyline points="22,6 12,13 2,6"/>
+      </svg>
+    </div>
+    <div class="contact-body">
+      <h2>Email Support</h2>
+      <p>Send us a message and we'll get back to you within 1–2 business days. Include your account email and a description of the issue for the fastest response.</p>
+      <a href="mailto:support@flowtight.app" class="contact-btn">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+          <polyline points="22,6 12,13 2,6"/>
+        </svg>
+        support@flowtight.app
+      </a>
+    </div>
+  </div>
+
+  <!-- Topics -->
+  <div class="section-heading">BROWSE BY TOPIC</div>
+  <div class="topic-grid">
+    <div class="topic-card">
+      <div class="topic-icon">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="10"/>
+          <line x1="12" y1="8" x2="12" y2="12"/>
+          <line x1="12" y1="16" x2="12.01" y2="16"/>
+        </svg>
+      </div>
+      <div class="topic-title">Getting Started</div>
+      <div class="topic-desc">Account setup, first recording, navigating the app</div>
+    </div>
+    <div class="topic-card">
+      <div class="topic-icon">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="2" y="5" width="20" height="14" rx="2"/>
+          <line x1="2" y1="10" x2="22" y2="10"/>
+        </svg>
+      </div>
+      <div class="topic-title">Billing & Subscriptions</div>
+      <div class="topic-desc">Pro plan, charges, cancellations, refunds</div>
+    </div>
+    <div class="topic-card">
+      <div class="topic-icon">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+        </svg>
+      </div>
+      <div class="topic-title">AI Features</div>
+      <div class="topic-desc">Beat generation, lyric generator, how AI credits work</div>
+    </div>
+    <div class="topic-card">
+      <div class="topic-icon">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+          <polyline points="14 2 14 8 20 8"/>
+          <line x1="16" y1="13" x2="8" y2="13"/>
+          <line x1="16" y1="17" x2="8" y2="17"/>
+          <polyline points="10 9 9 9 8 9"/>
+        </svg>
+      </div>
+      <div class="topic-title">Commercial Licensing</div>
+      <div class="topic-desc">License IDs, distribution rights, what's covered</div>
+    </div>
+    <div class="topic-card">
+      <div class="topic-icon">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="8" r="4"/>
+          <path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/>
+        </svg>
+      </div>
+      <div class="topic-title">Account & Privacy</div>
+      <div class="topic-desc">Change email, delete account, data requests</div>
+    </div>
+    <div class="topic-card">
+      <div class="topic-icon">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="3"/>
+          <path d="M19.07 4.93a10 10 0 0 1 0 14.14M4.93 4.93a10 10 0 0 0 0 14.14"/>
+        </svg>
+      </div>
+      <div class="topic-title">Technical Issues</div>
+      <div class="topic-desc">App crashes, audio problems, export errors</div>
+    </div>
+  </div>
+
+  <!-- FAQ -->
+  <div class="section-heading">FREQUENTLY ASKED QUESTIONS</div>
+  <div class="faq-list">
+
+    <details>
+      <summary>
+        Is FlowTight free to use?
+        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+      </summary>
+      <div class="faq-body">
+        <p>Yes. FlowTight is free to download and includes core features at no cost — recording, the beat maker, the step sequencer, and basic AI features.</p>
+        <p>FlowTight Pro is an optional subscription that unlocks unlimited AI beat generation, full export, stem export, the complete vocal effects library, and commercial license documentation.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary>
+        How do I cancel my Pro subscription?
+        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+      </summary>
+      <div class="faq-body">
+        <p>FlowTight Pro is billed through Apple. To cancel, go to <strong>Settings → Apple ID → Subscriptions</strong> on your iPhone, find FlowTight, and tap <strong>Cancel Subscription</strong>.</p>
+        <p>Your Pro access continues until the end of the current billing period. We do not offer refunds for partial billing periods, but if you believe you were charged in error please <a href="mailto:support@flowtight.app">contact us</a>.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary>
+        Can I use my recordings commercially?
+        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+      </summary>
+      <div class="faq-body">
+        <p>Yes. Every recording made in FlowTight receives an auto-generated license ID that documents your creation date and ownership. FlowTight Pro includes full commercial license documentation suitable for distribution on platforms like Spotify, Apple Music, and SoundCloud.</p>
+        <p>AI-generated beats produced within the app are licensed to you for commercial use. See our <a href="/terms/">Terms of Service</a> for full details.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary>
+        How does AI beat generation work?
+        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+      </summary>
+      <div class="faq-body">
+        <p>Tap the AI Beat feature, beatbox or hum a rhythm, choose a vibe, and optionally add a photo for visual inspiration. The AI generates a 30-second original beat in seconds.</p>
+        <p>Free accounts get a limited number of AI beat generations per month. FlowTight Pro includes unlimited generations.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary>
+        How does the AI Lyric Generator work?
+        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+      </summary>
+      <div class="faq-body">
+        <p>Choose a flow style (Standard, Triplet, Double Time, Syncopated, Melodic, Punchline, or Punches), enter your topic or theme, and the AI generates 4 bars written to match that rhythm pattern.</p>
+        <p>The generator works across all musical genres — not just hip-hop. Use it for pop hooks, R&amp;B verses, country lyrics, and more.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary>
+        My recording didn't save — what happened?
+        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+      </summary>
+      <div class="faq-body">
+        <p>Recordings are saved to your account automatically when you finish. If a recording is missing, try the following:</p>
+        <p>1. Pull down to refresh your Library.<br />2. Check your internet connection — recordings sync when online.<br />3. Make sure you are signed into the same account you recorded with.</p>
+        <p>If the recording is still missing, <a href="mailto:support@flowtight.app">email us</a> with the approximate time and date of the recording and we'll investigate.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary>
+        How do I export my beat or recording?
+        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+      </summary>
+      <div class="faq-body">
+        <p>Export is available on FlowTight Pro. Open the recording or beat, tap the share icon, and choose <strong>Export Audio</strong>. You can export as a stereo mix or as individual stems (separate instrument tracks) for further production in other DAWs.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary>
+        How do I delete my account?
+        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+      </summary>
+      <div class="faq-body">
+        <p>You can request account deletion by emailing <a href="mailto:support@flowtight.app">support@flowtight.app</a> with the subject line "Delete My Account." Include the email address associated with your account.</p>
+        <p>Account deletion is permanent. All recordings, beats, and license records associated with your account will be removed within 30 days. See our <a href="/privacy/">Privacy Policy</a> for details on data retention.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary>
+        What iOS version does FlowTight require?
+        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+      </summary>
+      <div class="faq-body">
+        <p>FlowTight requires iOS 16 or later. For the best experience with AI features, we recommend iOS 17+. Android support is planned for a future release.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary>
+        I have a feature request or feedback.
+        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+      </summary>
+      <div class="faq-body">
+        <p>We'd love to hear from you. Send feature requests and feedback to <a href="mailto:support@flowtight.app">support@flowtight.app</a> with the subject line "Feedback." Our team reads every message and uses your input to shape the product roadmap.</p>
+      </div>
+    </details>
+
+  </div>
+
+</div>
+
+<footer>
+  <p>© 2025 NgneerX Technology LLC &nbsp;·&nbsp;
+    <a href="/">FlowTight</a> &nbsp;·&nbsp;
+    <a href="/privacy/">Privacy Policy</a> &nbsp;·&nbsp;
+    <a href="/terms/">Terms of Service</a> &nbsp;·&nbsp;
+    <a href="mailto:support@flowtight.app">support@flowtight.app</a>
+  </p>
+</footer>
+
+</body>
+</html>
